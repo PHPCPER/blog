@@ -23,6 +23,7 @@ class CreateCategoryListTable extends Migration
             $table->string('category_name')->comment('分类名称');
             $table->string('category_alias')->comment('名称别名');
             $table->text('description')->nullable()->comment('分类描述');
+            $table->unsignedInteger('sort')->default(0)->comment('排序');
             $table->softDeletes();
             $table->timestamps();
         });
