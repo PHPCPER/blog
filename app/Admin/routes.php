@@ -13,4 +13,5 @@ Route::group([
     $router->resource('article','ArticleController');
     $router->resource('label','LabelsController');
     $router->resource('category','CategoryController');
+    $router->resource('comment','CommentController');
 });

@@ -22,10 +22,9 @@ class CreateCommentsTable extends Migration
             $table->unsignedInteger('user_id')->comment('发表文章用户id');
             $table->unsignedInteger('article_id')->comment('文章id');
             $table->string('user_name')->comment('评论人昵称');
-            $table->unsignedInteger('comment_love_count')->comment('点赞数量');
+            $table->unsignedInteger('comment_love_count')->default(0)->comment('点赞数量');
             $table->longText('comment_content')->comment('评论内容');
             $table->text('parent_comment_id')->nullable()->comment('评论父级');
-            $table->unsignedInteger('article_view')->comment('浏览数量');
             $table->unsignedTinyInteger('status')->comment('状态 0禁用 1 启用');
             $table->softDeletes();
             $table->timestamps();

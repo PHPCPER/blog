@@ -25,25 +25,10 @@ class CategoryController extends Controller
     public function index()
     {
         return Admin::content(function (Content $content) {
-            $content->header('All categories');
+            $content->header('分类树');
 
             $content->body($this->tree());
         });
-    }
-
-    /**
-     * Show interface.
-     *
-     * @param mixed   $id
-     * @param Content $content
-     * @return Content
-     */
-    public function show($id, Content $content)
-    {
-        return $content
-            ->header('Detail')
-            ->description('description')
-            ->body($this->detail($id));
     }
 
     /**
@@ -56,8 +41,8 @@ class CategoryController extends Controller
     public function edit($id, Content $content)
     {
         return $content
-            ->header('Edit')
-            ->description('description')
+            ->header('修改')
+            ->description('修改分类')
             ->body($this->form()->edit($id));
     }
 
@@ -70,8 +55,8 @@ class CategoryController extends Controller
     public function create(Content $content)
     {
         return $content
-            ->header('Create')
-            ->description('description')
+            ->header('增加')
+            ->description('增加分类')
             ->body($this->form());
     }
 
@@ -103,7 +88,6 @@ class CategoryController extends Controller
 
         $form->display('id', 'ID');
         $form->select('parent_id')->options(CategoryListModel::selectOptions());
-
         $form->text('category_name')->rules('required');
         $form->text('category_alias')->rules('required');
         $form->textarea('description')->rules('required');
@@ -117,7 +101,7 @@ class CategoryController extends Controller
             $tools->disableView();
         });
         $form->footer(function ($footer) {
-            
+
             // 去掉`查看`checkbox
             $footer->disableViewCheck();
 
