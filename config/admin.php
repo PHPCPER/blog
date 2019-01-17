@@ -11,7 +11,7 @@ return [
     | login page.
     |
     */
-    'name' => 'Laravel-admin',
+    'name' => 'Eagle',
 
     /*
     |--------------------------------------------------------------------------
@@ -19,10 +19,10 @@ return [
     |--------------------------------------------------------------------------
     |
     | The logo of all admin pages. You can also set it as an image by using a
-    | `img` tag, eg '<img src="http://logo-url" alt="Admin logo">'.
+    | `img` tag, eg '<img src="http://logo-url" alt="admin logo">'.
     |
     */
-    'logo' => '<b>Laravel</b> admin',
+    'logo' => '<b>Eagle</b> 博客后台',
 
     /*
     |--------------------------------------------------------------------------
@@ -31,10 +31,10 @@ return [
     |
     | The logo of all admin pages when the sidebar menu is collapsed. You can
     | also set it as an image by using a `img` tag, eg
-    | '<img src="http://logo-url" alt="Admin logo">'.
+    | '<img src="http://logo-url" alt="admin logo">'.
     |
     */
-    'logo-mini' => '<b>La</b>',
+    'logo-mini' => '<b>Eagle</b>',
 
     /*
     |--------------------------------------------------------------------------
@@ -48,9 +48,9 @@ return [
     */
     'route' => [
 
-        'prefix' => 'admin',
+        'prefix' => '',
 
-        'namespace' => 'App\\Admin\\Controllers',
+        'namespace' => 'App\\admin\\Controllers',
 
         'middleware' => ['web', 'admin'],
     ],
@@ -61,7 +61,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | The installation directory of the controller and routing configuration
-    | files of the administration page. The default is `app/Admin`, which must
+    | files of the administration page. The default is `app/admin`, which must
     | be set before running `artisan admin::install` to take effect.
     |
     */
@@ -205,7 +205,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Admin map field provider
+    | admin map field provider
     |--------------------------------------------------------------------------
     |
     | Supported: "tencent", "google", "yandex".
@@ -300,7 +300,7 @@ return [
     | When you use command `php artisan admin:extend` to generate extensions,
     | the extension files will be generated in this directory.
     */
-    'extension_dir' => app_path('Admin/Extensions'),
+    'extension_dir' => app_path('admin/Extensions'),
 
     /*
     |--------------------------------------------------------------------------
