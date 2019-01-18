@@ -15,6 +15,8 @@ return [
 
     'name' => env('APP_NAME', 'Eagle'),
 
+    'admin_domain'  => env('ADMIN_DOMAIN', 'admin.blog.com'),
+    'api_domain'    => env('API_DOMAIN', 'api.blog.com'),
     /*
     |--------------------------------------------------------------------------
     | Application Environment

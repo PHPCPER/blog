@@ -37,9 +37,9 @@ class RouteServiceProvider extends ServiceProvider
     {
         $this->mapApiRoutes();
 
-        $this->mapWebRoutes();
+        //$this->mapWebRoutes();
 
-        //
+
     }
 
     /**
@@ -65,8 +65,9 @@ class RouteServiceProvider extends ServiceProvider
      */
     protected function mapApiRoutes()
     {
-        Route::domain(config('app.api_domain'))
+        Route::domain('api.blog.com')
             ->namespace('App\Http\Controllers\Api')
             ->group(base_path('routes/api.php'));
     }
+
 }

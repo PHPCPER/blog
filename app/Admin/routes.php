@@ -2,9 +2,10 @@
 
 use Illuminate\Routing\Router;
 
-Admin::registerAuthRoutes();
+//Admin::registerAuthRoutes();
 
 Route::group([
+    'domain'        => 'admin',
     'prefix'        => config('admin.route.prefix'),
     'namespace'     => config('admin.route.namespace'),
     'middleware'    => config('admin.route.middleware'),
